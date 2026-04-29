@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UFT-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telebachillerato Comunitario Num. 230</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios Escolares</a></li>
+        <li><a href="Instalaciones.html">Instalaciones</a></li>
+        <li><a href="talleres.html">Talleres</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <img src="LOGO_TBC.jpeg" class="logo" />
+      <h1>Talleres</h1>
+    </header>
+
+    <main>
+      <section class="porque">
+        <h2>Nuestros Talleres</h2>
+        <p>Conoce las actividades que ofrecemos:</p>
+
+        <div class="galeria">
+          <div class="tarjeta">
+            <h3>Ajedrez</h3>
+            <img src="ajedrez.jpeg" onclick="abrirImagen(this.src)" />
+          </div>
+
+          <div class="tarjeta">
+            <h3>Básquet</h3>
+            <img src="basquet.jpeg" onclick="abrirImagen(this.src)" />
+          </div>
+
+          <div class="tarjeta">
+            <h3>Fútbol</h3>
+            <img src="" onclick="abrirImagen(this.src)" />
+          </div>
+
+          <div class="tarjeta">
+            <h3>Danza</h3>
+            <img src="Danza.jpeg" onclick="abrirImagen(this.src)" />
+          </div>
+
+          <div class="tarjeta">
+            <h3>Dibujo y Pintura</h3>
+            <img src="dibujo y pintura.jpeg" onclick="abrirImagen(this.src)" />
+          </div>
+
+          <div class="tarjeta">
+            <h3>Música</h3>
+            <img src="musica.jpeg" onclick="abrirImagen(this.src)" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="visor">
+      <img id="imgGrande" />
+    </div>
+
+    <script>
+      function abrirImagen(src) {
+        document.getElementById("visor").style.display = "flex";
+        document.getElementById("imgGrande").src = src;
+      }
+
+      function cerrarImagen() {
+        document.getElementById("visor").style.display = "none";
+      }
+
+      // cerrar al hacer clic en fondo
+      document.getElementById("visor").addEventListener("click", cerrarImagen);
+    </script>
+  </body>
+</html>
